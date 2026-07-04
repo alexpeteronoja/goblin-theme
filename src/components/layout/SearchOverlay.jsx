@@ -58,8 +58,8 @@ export default function SearchOverlay({ isOpen, onClose }) {
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-grow overflow-y-auto px-6 md:px-8 py-10 lg:py-20 flex flex-col">
-        <div className="max-w-[1200px] mx-auto w-full flex flex-col lg:flex-row gap-16 lg:gap-32">
+      <div className="grow overflow-y-auto px-6 md:px-8 py-10 lg:py-20 flex flex-col">
+        <div className="max-w-300 mx-auto w-full flex flex-col lg:flex-row gap-16 lg:gap-32">
           {/* Left Column: Input & Recommendations */}
           <div className="flex-1 flex flex-col">
             <form onSubmit={handleSearch} className="relative mb-12">
@@ -131,7 +131,7 @@ export default function SearchOverlay({ isOpen, onClose }) {
               onClick={onClose}
               className="flex-1 group cursor-pointer"
             >
-              <div className="w-full aspect-[4/5] bg-gray-200 overflow-hidden mb-4">
+              <div className="w-full aspect-4/5 bg-gray-200 overflow-hidden mb-4">
                 <img
                   src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop"
                   alt="Lookbook"
@@ -148,7 +148,7 @@ export default function SearchOverlay({ isOpen, onClose }) {
               onClick={onClose}
               className="flex-1 group cursor-pointer hidden sm:block"
             >
-              <div className="w-full aspect-[4/5] bg-gray-200 overflow-hidden mb-4">
+              <div className="w-full aspect-4/5 bg-gray-200 overflow-hidden mb-4">
                 <img
                   src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop"
                   alt="Editorial"
