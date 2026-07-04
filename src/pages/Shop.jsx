@@ -195,12 +195,12 @@ Prevent page scrolling while the filter drawer is open.
           {products.map((product) => (
             <article key={product.id} className="group flex flex-col">
               {/* Horizontal product image slider */}
-              <div className="flex aspect-[4/5] w-full snap-x snap-mandatory overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              <div className="flex aspect-4/5 w-full snap-x snap-mandatory overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none">
                 {product.images.map((image, index) => (
                   <Link
                     key={image}
                     to={`/product/${product.id}`}
-                    className="block h-full w-full flex-shrink-0 snap-start bg-gray-200"
+                    className="block h-full w-full shrink-0 snap-start bg-gray-200"
                     aria-label={`View ${product.name}, image ${index + 1}`}
                   >
                     <img
@@ -241,7 +241,7 @@ Prevent page scrolling while the filter drawer is open.
       {/* Refine Drawer */}
       <aside
         aria-hidden={!isRefineOpen}
-        className={`fixed right-0 top-0 z-50 h-full w-full transform bg-[#f4f4f0] transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] md:w-[400px] ${
+        className={`fixed right-0 top-0 z-50 h-full w-full transform bg-ald-cream transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] md:w-100 ${
           isRefineOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -262,7 +262,7 @@ Prevent page scrolling while the filter drawer is open.
           </header>
 
           {/* Drawer content */}
-          <div className="flex-1 overflow-y-auto px-6 py-6 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div className="flex-1 overflow-y-auto px-6 py-6 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none">
             <div className="space-y-6">
               {Object.entries(filterGroups).map(([category, items]) => {
                 const isOpen = activeAccordion === category;
@@ -316,7 +316,7 @@ Prevent page scrolling while the filter drawer is open.
           </div>
 
           {/* Drawer footer */}
-          <footer className="border-t border-gray-300 bg-[#f4f4f0] p-6">
+          <footer className="border-t border-gray-300 bg-ald-cream p-6">
             <button
               type="button"
               onClick={closeRefineDrawer}

@@ -40,10 +40,10 @@ export default function Search() {
   ];
 
   return (
-    <div className="w-full bg-[#f4f4f0] min-h-screen text-ald-black pt-24 md:pt-32 pb-24">
+    <div className="w-full bg-ald-cream min-h-screen text-ald-black pt-24 md:pt-32 pb-24">
       {/* Search Header Container (Sticky) */}
-      <div className="sticky top-[60px] md:top-[80px] z-30 bg-[#f4f4f0] pb-4">
-        <div className="max-w-[1200px] mx-auto px-4 md:px-8 pt-8">
+      <div className="sticky top-15 md:top-20 z-30 bg-ald-cream pb-4">
+        <div className="max-w-300 mx-auto px-4 md:px-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black pb-4 mb-4">
             <h1 className="text-2xl lg:text-3xl uppercase tracking-widest font-normal mb-4 md:mb-0">
               {query.toUpperCase()}
@@ -85,7 +85,7 @@ export default function Search() {
                 {/* Image */}
                 <Link
                   to={`/product/${product.id}`}
-                  className="w-full aspect-[4/5] bg-gray-200 block overflow-hidden"
+                  className="w-full aspect-4/5 bg-gray-200 block overflow-hidden"
                 >
                   <img
                     src={product.images[0]}
